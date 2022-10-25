@@ -1,0 +1,76 @@
+.ticket-container {
+  border: 1px solid #ccc;
+  padding: 0px;
+  box-shadow: 1px 2px #666;
+}
+
+.ticket-header {
+  padding: 5px 20px;
+  border-bottom: #ccc;
+}
+
+.ticket-header h2 {
+  margin: 0px;
+}
+
+.ticket-header {
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  color: #ff4800;
+  font-size: 0.9em;
+  font-family: "Lora", serif;
+  letter-spacing: 0.1em;
+}
+
+.ticket-body {
+  padding: 10px 40px;
+}
+
+.ticket-body form label,
+.ticket-body form span {
+  display: block;
+}
+
+.error {
+  color: red;
+}
+
+.demarcate {
+  margin-top: 10px;
+}
+
+.form-item {
+  display: block;
+  border: 1px solid #ccc;
+}
+
+select {
+  width: 40% !important;
+  border: 1px solid #ccc !important;
+  height: 25px !important;
+  padding: 2px !important;
+}
+
+textarea {
+  width: 96% !important;
+  padding: 10px;
+  line-height: 1.6em;
+}
+
+.btn-submit {
+  margin-top: 15px;
+  width: 40%;
+  padding: 5px;
+  height: 30px;
+}
+
+.btn-submit:hover {
+  color: #ff4800;
+  background-color: #000;
+  cursor: pointer;
+}
+
+.radius {
+  border-radius: 2px;
+}

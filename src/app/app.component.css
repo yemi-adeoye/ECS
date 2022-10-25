@@ -1,0 +1,35 @@
+.app-container {
+  margin: 0px;
+  height: 100%;
+}
+
+.app-header {
+  background-color: #fff;
+  padding: 5px 40px;
+  vertical-align: middle;
+  border-bottom: 1px solid #ccc;
+  color: #e74100;
+  font-weight: bold;
+
+}
+
+.app-header img {
+  width: 6.40625vw;
+  height: auto;
+  max-width: 100%;
+}
+
+header span{
+  float: right;
+  vertical-align: bottom;
+  margin-top: 5px;
+}
+
+
+
+.error_msg {
+  color: red;
+  font-size: medium;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}

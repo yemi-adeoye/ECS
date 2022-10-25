@@ -1,0 +1,46 @@
+<div class="leave-container">
+  <div class="leave-header">
+    <h2>Apply for Leave</h2>
+  </div>
+
+  <div class="leave-body">
+    <div class="error-msg">
+      {{ leaveMsg }}
+    </div>
+    <form [formGroup]="leaveForm" (submit)="onApplyLeave()">
+      <label for="exampleFormControlInput1">Email address</label>
+      <input
+        type="email"
+        class="form-item radius"
+        id="exampleFormControlInput1"
+        placeholder="name@example.com"
+      />
+
+      <label>From</label>
+      <input
+        type="date"
+        name="from"
+        formControlName="from"
+        class="form-item radius"
+      />
+
+      <label>To</label>
+      <input
+        class="form-item radius"
+        type="date"
+        name="to"
+        formControlName="to"
+      />
+
+      <label>Number of Days</label>
+      <input class="form-item radius" type="text" formControlName="numDays" />
+
+      <input
+        class="btn-submit form-item"
+        type="submit"
+        value="Apply Leave"
+        [disabled]="!leaveForm.valid"
+      />
+    </form>
+  </div>
+</div>

@@ -1,0 +1,53 @@
+<div class="ticket-container radius">
+  <div class="ticket-header">
+    <h2>Generate Ticket</h2>
+  </div>
+  <div class="ticket-body">
+    <div class="error-msg">
+      {{ msg }}
+    </div>
+    <form (submit)="onIssueSubmit()" [formGroup]="ticketForm">
+      <textarea
+        class="form-item radius"
+        formControlName="issue"
+        rows="8"
+        placeholder="What do you need help with?"
+      ></textarea>
+      <span
+        *ngIf="
+          ticketForm.controls['issue'].invalid &&
+          ticketForm.controls['issue'].touched
+        "
+      >
+        <span
+          class="error"
+          *ngIf="ticketForm.controls['issue'].errors['required']"
+          >Please enter the Issue</span
+        >
+      </span>
+      <label class="demarcate">Priority</label>
+      <select class="priority radius -item" formControlName="priority" name="priority" style="width: 100%">
+        <option *ngFor="let p of priority" value="{{ p }}">{{ p }}</option>
+      </select>
+      <span
+        *ngIf="
+          ticketForm.controls['priority'].invalid &&
+          ticketForm.controls['priority'].touched
+        "
+      >
+        <span
+          class="error"
+          *ngIf="ticketForm.controls['priority'].errors['required']"
+          >Please select the priority</span
+        >
+      </span>
+
+      <input
+        class="form-item btn-submit radius"
+        type="submit"
+        value="Generate Ticket"
+        [disabled]="!ticketForm.valid"
+      />
+    </form>
+  </div>
+</div>

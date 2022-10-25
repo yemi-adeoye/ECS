@@ -1,0 +1,74 @@
+.leave-container {
+  border: 1px solid #ccc;
+  padding: 0px;
+  box-shadow: 1px 2px #666;
+}
+
+.leave-header {
+  padding: 5px 20px;
+  border-bottom: #333;
+}
+
+.leave-header h2 {
+  margin: 0px;
+}
+
+.leave-header {
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  color: #ff4800;
+  font-size: 0.9em;
+  font-family: "Lora", serif;
+  letter-spacing: 0.1em;
+}
+
+.leave-body {
+  padding: 10px 40px;
+
+}
+
+.leave-body form label,
+.leave-body form span {
+  display: block;
+}
+
+.error {
+  color: red;
+}
+
+.form-item {
+  display: block;
+  border: 1px solid #ccc;
+}
+
+.radius {
+  border-radius: 2px;
+}
+
+.btn-submit {
+  margin-top: 15px;
+  padding: 5px;
+  height: 30px;
+
+}
+
+input{
+  margin-bottom: 15px;
+  height: 25px;
+  padding: 2px;
+}
+
+input[type=email]{
+  width: 50%;
+}
+
+input[type=date], input[type=submit]{
+  width: 40%;
+}
+
+.btn-submit:hover {
+  color: #ff4800;
+  background-color: #000;
+  cursor: pointer;
+}
