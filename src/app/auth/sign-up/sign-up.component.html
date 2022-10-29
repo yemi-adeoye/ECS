@@ -134,12 +134,10 @@
           >Characters allowed: [a-zA-Z0-9 _#]</span
         >
       </span>
-      <span>
-        <app-password-strength
-          [passwordToCheck]="signUpForm.value.password"
-          (passwordStrength)="passwordValid($event)"
-        ></app-password-strength
-      ></span>
+      <app-password-strength
+        [passwordToCheck]="signUpForm.value.password"
+        (passwordStrength)="passwordValid($event)"
+      ></app-password-strength>
     </div>
     <div class="form-group">
       <label>Password Again</label>
