@@ -4,10 +4,6 @@
     (submit)="onFormSubmit()"
     [formGroup]="signUpForm"
   >
-    <div class="msg">
-      {{ msg }}
-    </div>
-
     <div class="form-group">
       <label>Name: </label>
       <input
@@ -31,6 +27,11 @@
           class="error"
           *ngIf="signUpForm.controls['name'].errors['pattern']"
           >No special chars are allowed</span
+        >
+        <span
+          class="error"
+          *ngIf="signUpForm.controls['name'].errors['minlength']"
+          >Minumum 3 character is required</span
         >
       </span>
     </div>
@@ -63,13 +64,13 @@
       </select>
       <span
         *ngIf="
-          signUpForm.controls['jobTitle'].invalid &&
-          signUpForm.controls['jobTitle'].touched
+          signUpForm.controls['managerEmail'].invalid &&
+          signUpForm.controls['managerEmail'].touched
         "
       >
         <span
           class="error"
-          *ngIf="signUpForm.controls['jobTitle'].errors['required']"
+          *ngIf="signUpForm.controls['managerEmail'].errors['required']"
           >Manager is required</span
         >
       </span>
@@ -109,6 +110,7 @@
         class="form-input"
         name="password"
         formControlName="password"
+        autocomplete="off"
       />
       <span
         *ngIf="
@@ -132,8 +134,13 @@
           >Characters allowed: [a-zA-Z0-9 _#]</span
         >
       </span>
+      <span>
+        <app-password-strength
+          [passwordToCheck]="signUpForm.value.password"
+          (passwordStrength)="passwordValid($event)"
+        ></app-password-strength
+      ></span>
     </div>
-
     <div class="form-group">
       <label>Password Again</label>
       <input
@@ -154,6 +161,10 @@
           >Enter your password again</span
         >
       </span>
+    </div>
+
+    <div class="msg" style="text-align: center; color: red; font-size: 20px">
+      {{ msg }}
     </div>
 
     <div class="form-group">
